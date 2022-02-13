@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hololive Original Shop</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>    
+    <script src="js/bootstrap.min.js" ></script>
+    <link type="text/css" rel="stylesheet" href="shop.css">
+    
+</head>
+<body>
+   
+    <!--輪播圖片-->
+        <div id="playList" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#playList" data-slide-to="0" class="active"></li>
+              <li data-target="#playList" data-slide-to="1"></li>
+              <li data-target="#playList" data-slide-to="2"></li>
+              <li data-target="#playList" data-slide-to="3"></li>
+              <li data-target="#playList" data-slide-to="4"></li>
+            </ul>
+            
+           
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    
+                    <img srcset="/image/index/container/shop_mio.png" class="d-block img-fluid" >
+                    
+                </div>
+                <div class="carousel-item">
+                    
+                    <img src="/image/index/container/shop_Lamy.png" class="d-block img-fluid">
+               
+                </div>
+                <div class="carousel-item">
+                    
+                    <img src="/image/index/container/shop_watame.png" class="d-block img-fluid">
+                   
+                </div>
+                <div class="carousel-item">
+                    
+                    <img src="/image/index/container/shop_aqua.jpg" class="d-block img-fluid">
+                   
+                </div>
+                <div class="carousel-item">
+                    
+                    <img src="/image/index/container/shop_suisei.jpg" class="d-block img-fluid">
+                   
+                </div>
+            </div>
+            
+            <a class="carousel-control-prev" href="#playList" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#playList" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+    <!--Goods-->
+        <div class=" container" >
+            <div class="goods">
+                <img src="/image/shop/ayame.jpg" >
+                    <div class="goods-content" style="border: 8px solid red;">
+                        
+                        <h1>百鬼あやめ 活動三周年記念</h1> <br><br>
+                        <h5>〈受注期間〉2021年10月2日～2021年11月8日 18：00</h5> <br><br>
+                        <h5>〈発送時期〉2022年2月中旬～2022年3月中旬予定</h5> <br><br>
+                        <h5>〈價格〉12,000 JPY</h5> <br><br>
+                        
+                    </div>      
+            </div>
+            <div class="goods-button">
+                <button onclick="reduse1(this)" >-</button> &nbsp&nbsp
+	            <input type="text" style="width: 40px; height: 40px; text-align: center;"  id="piece1" value="0" readonly="readonly"/>&nbsp&nbsp
+	            <button onclick="add1(this)">+</button>
+                <span id="subtotal1" style="padding-left: 30px;">小計:</span>
+                <input type="text" style="width: 150px; text-align:right;height: 40px;" id="price1" value="0" readonly="readonly">JPY
+            </div>
+
+            <div class="goods">
+                <img src="/image/shop/watame.jpg" >
+                    <div class="goods-content" style="border: 8px solid rgb(236, 240, 28)">
+                        
+                        <h1>角巻わため 誕生日記念2021</h1> <br><br>
+                        <h5>〈受注期間〉2021年6月6日～2021年7月12日 18：00</h5> <br><br>
+                        <h5>〈発送時期〉2021年10月下旬～11月下旬以降</h5> <br><br>
+                        <h5>〈價格〉10,000 JPY</h5> <br><br>
+                        
+                    </div>      
+            </div>
+            <div class="goods-button">
+                <button onclick="reduse2(this)" >-</button> &nbsp&nbsp
+	            <input type="text" style="width: 40px; height: 40px; text-align: center;"  id="piece2" value="0" readonly="readonly"/>&nbsp&nbsp
+	            <button onclick="add2(this)">+</button>
+                <span id="subtotal2" style="padding-left: 30px;">小計:</span>
+                <input type="text" style="width: 150px; text-align:right;height: 40px;" id="price2" value="0" readonly="readonly">JPY
+            </div>
+
+            <div class="goods">
+                <img src="/image/shop/mio.jpg" >
+                    <div class="goods-content" style="border: 8px solid black;">
+                        
+                        <h1>大神ミオ 誕生日記念2021</h1> <br><br>
+                        <h5>〈受注期間〉2021年8月20日～2021年9月20日 18:00</h5> <br><br>
+                        <h5>〈発送時期〉2021年12月下旬～2022年2月下旬予定</h5> <br><br>
+                        <h5>〈價格〉20,000 JPY</h5> <br><br>
+                        
+                    </div>      
+            </div>
+            <div class="goods-button">
+                <button onclick="reduse3(this)" >-</button> &nbsp&nbsp
+	            <input type="text" style="width: 40px; height: 40px; text-align: center;"  id="piece3" value="0" readonly="readonly"/>&nbsp&nbsp
+	            <button onclick="add3(this)">+</button>
+                <span id="subtotal3" style="padding-left: 30px;">小計:</span>
+                <input type="text" style="width: 150px; text-align:right;height: 40px;" id="price3" value="0" readonly="readonly">JPY
+            </div>
+
+            <div class="goods">
+                <img src="/image/shop/pekora.jpg" >
+                    <div class="goods-content" style="border: 8px solid lightblue;" >
+                        
+                        <h1>兎田ぺこら 活動二周年記念</h1> <br><br>
+                        <h5>〈受注期間〉2021年7月17日～2021年8月23日 18：00まで</h5> <br><br>
+                        <h5>〈発送時期〉2021年11月下旬～12月下旬</h5> <br><br>
+                        <h5>〈價格〉15,000 JPY</h5> <br><br>
+                        
+                    </div>      
+            </div>
+            <div class="goods-button">
+                <button onclick="reduse4(this)" >-</button> &nbsp&nbsp
+	            <input type="text" style="width: 40px; height: 40px; text-align: center;"  id="piece4" value="0" readonly="readonly"/>&nbsp&nbsp
+	            <button onclick="add4(this)">+</button>
+                <span id="subtotal4" style="padding-left: 30px;">小計:</span>
+                <input type="text" style="width: 150px; text-align:right;height: 40px;" id="price4" value="0" readonly="readonly">JPY
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="goodstotal">
+                <span >總價：</span>
+                <input type="text" style="width: 150px;height: 40px; text-align: right;  " id="total" value="0" readonly="readonly">&nbsp&nbsp&nbsp&nbsp<span>JPY</span> 
+            </div>
+        </div>
+        <div>
+            <button onclick="pay()" id="pay" class="pay">結帳</button>
+        </div>
+
+<script>
+
+    function add1(btn){
+        piece1.value = Number(btn.previousElementSibling.value) + 1;
+
+        price1.value= Number(document.getElementById(`subtotal1`).nextElementSibling.value) +12000;
+
+        total.value = Number(document.getElementById(`total`).value) + 12000;
+        
+}
+
+    function reduse1(btn){
+
+        if(piece1.value >=1)
+        {
+            piece1.value = Number(btn.nextElementSibling.value) - 1;
+
+            price1.value= Number(document.getElementById(`subtotal1`).nextElementSibling.value) - 12000;
+
+            total.value = Number(document.getElementById(`total`).value) - 12000;
+        }      
+}
+    
+    function add2(btn){
+        piece2.value = Number(btn.previousElementSibling.value) + 1;
+
+        price2.value= Number(document.getElementById(`subtotal2`).nextElementSibling.value) +10000;
+
+        total.value = Number(document.getElementById(`total`).value) + 10000;
+}
+
+    function reduse2(btn){
+
+        if(piece2.value >=1)
+        {
+            piece2.value = Number(btn.nextElementSibling.value) - 1;
+
+            price2.value= Number(document.getElementById(`subtotal2`).nextElementSibling.value) -10000;
+
+            total.value = Number(document.getElementById(`total`).value) - 10000;
+        }   
+}
+
+    function add3(btn){
+        piece3.value = Number(btn.previousElementSibling.value) + 1;
+
+        price3.value= Number(document.getElementById(`subtotal3`).nextElementSibling.value) +20000;
+
+        total.value = Number(document.getElementById(`total`).value) + 20000;
+}
+
+    function reduse3(btn){
+
+        if(piece3.value >=1)
+        {
+            piece3.value = Number(btn.nextElementSibling.value) - 1;
+
+            price3.value= Number(document.getElementById(`subtotal3`).nextElementSibling.value) -20000;
+
+            total.value = Number(document.getElementById(`total`).value) - 20000;
+        }   
+}
+
+    function add4(btn){
+        piece4.value = Number(btn.previousElementSibling.value) + 1;
+
+        price4.value= Number(document.getElementById(`subtotal4`).nextElementSibling.value) +15000;
+
+        total.value = Number(document.getElementById(`total`).value) + 15000;
+}
+
+    function reduse4(btn){
+
+        if(piece4.value >=1)
+        {
+            piece4.value = Number(btn.nextElementSibling.value) - 1;
+
+            price4.value= Number(document.getElementById(`subtotal4`).nextElementSibling.value) -15000;
+
+            total.value = Number(document.getElementById(`total`).value) - 15000;
+        } 
+}
+    function pay(){
+
+        alert(`本筆消費訂單共 ${total.value}JPY`)
+    }
+</script>
+</body>
+</html>
